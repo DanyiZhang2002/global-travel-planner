@@ -5,6 +5,11 @@ description: 全球范围旅行行程规划、行前复核与临场调整 Skill�
 
 # Global Travel Planner
 
+## 两种模式（先判断用哪个）
+
+- **fare-scan（找最便宜怎么飞）**：用户诉求是「找最便宜机票/最划算出行方式」时，走此模式：枚举直飞+各中转枢纽×多候选日期，读价后按总价排名。见 [references/fare-scan.md](references/fare-scan.md)，**不走下面的完整行程流程**。
+- **完整行程规划**：用户要一份可执行行程单时，走下面 8 步。
+
 把旅行需求变成可执行、可校验、可继续修改的全球行程。每次必须同时交付：对话版 Markdown 攻略 + 本地单文件 HTML，两者由同一份已校验 JSON 生成，核心事实一致。只有用户明确要求分享并确认隐私影响后，才额外发布公开链接。
 
 ## 工作原则
@@ -117,5 +122,6 @@ python scripts/render_html.py assets/template.html trip.json -o trip.html
 
 - [references/data-sources.md](references/data-sources.md)：五类信息源、status 语义与降级铁律
 - [references/link-builders.md](references/link-builders.md)：航班/酒店/地图查询链接生成
+- [references/fare-scan.md](references/fare-scan.md)：fare-scan 模式（找最便宜飞法：多路由×多日期扫描→按总价排名）
 - [references/fare-reading.md](references/fare-reading.md)：浏览器读价模块（用户在环，只读不下单）+ record_fares.py 写回
 - [references/trip-schema.json](references/trip-schema.json)：行程 JSON 结构（全球坐标范围）
