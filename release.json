@@ -1,0 +1,12 @@
+{
+  "projectDir": "/home/node/.openclaw/workspace/tmp/xinglv-riji",
+  "edits": [],
+  "typeCheck": true,
+  "build": true,
+  "postBuild": {
+    "r15": {
+      "appCode": "xinglv-riji",
+      "appName": "行旅日记"
+    }
+  }
+}

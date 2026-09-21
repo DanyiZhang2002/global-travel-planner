@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "appCode": "xinglv-riji",
+  "appName": "行旅日记",
+  "runtime": {
+    "framework": "react18",
+    "builder": "vite",
+    "entry": "src/main.tsx"
+  },
+  "build": {
+    "command": "pnpm install --frozen-lockfile && pnpm build",
+    "outputDir": "dist",
+    "entryFile": "index.html",
+    "envRequired": [
+      "VITE_CDN_BASE"
+    ]
+  },
+  "render": {
+    "container": "qiankun",
+    "viewport": {
+      "width": "100%",
+      "height": "100%"
+    }
+  }
+}

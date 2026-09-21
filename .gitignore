@@ -1,6 +1,18 @@
-db.properties
-ai.properties
-__pycache__/
-*.pyc
-.venv/
-node_modules/
+node_modules
+dist
+.DS_Store
+*.local
+.vite
+.env.local
+.env.*.local
+
+# 构建/上传元信息（每次 build 重写）
+.last-build.json
+source.zip
+
+# 临时目录（不入仓、不进 source.zip，build_and_upload.sh 顶层排除）
+tmp/
+
+# 封面截图（图片产物上传 CDN 后才是稳定来源，git 只留 covers/README.md 占位）
+covers/*
+!covers/README.md
