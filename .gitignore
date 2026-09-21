@@ -1,5 +1,6 @@
+db.properties
+ai.properties
 __pycache__/
 *.pyc
-.DS_Store
-/tmp/
-*.md.tmp
+.venv/
+node_modules/
